@@ -1,7 +1,7 @@
 {
-  "name": "task-manager-backend",
+  "name": "pet-clinic-management-backend",
   "version": "1.0.0",
-  "description": "Backend for Task Manager App",
+  "description": "Backend for Pet Clinic Management App",
   "main": "server.js",
   "scripts": {
     "test": "mocha",
@@ -18,7 +18,9 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.14",
-    "request": "^2.88.2"
+    "pet-clinic-management": "file:..",
+    "request": "^2.88.2",
+    "task-manager": "file:.."
   },
   "devDependencies": {
     "esm": "^3.2.25",
@@ -26,6 +28,6 @@
     "nodemon": "^2.0.15",
     "sinon": "^19.0.2"
   },
-  "author": "Task Manager Team",
+  "author": "Pet Clinic Team",
   "license": "ISC"
 }

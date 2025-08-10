@@ -44,7 +44,7 @@ const Pets = () => {
     }
   };
 
-  const handleEdit = (petId) => navigate(`/pets/edit/${petId}`);
+  // const handleEdit = (petId) => navigate(`/pets/edit/${petId}`);
   const handleView = (petId) => navigate(`/pets/${petId}`);
 
   // --- Create inline ---

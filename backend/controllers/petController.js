@@ -125,10 +125,17 @@ const addTreatment = async (req, res) => {
     // validate null value
     if (!date || !description || !vet || treatmentCost === undefined || treatmentCost === '') {
       return res.status(400).json({ message: 'date, description, vet, treatmentCost are required.' });
-    }
+    };
 
     // add new treatment and save
-    pet.treatments.push(req.body);
+    pet.treatments.push({
+    date,
+    description,
+    vet,
+    treatmentCost: Number(treatmentCost),
+    medicineCost: Number(medicineCost || 0),
+    totalCost: Number(treatmentCost) + Number(medicineCost || 0),
+    });
     await pet.save();
 
     const added = pet.treatments[pet.treatments.length - 1];

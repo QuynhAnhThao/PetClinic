@@ -21,14 +21,14 @@ const TreatmentForm = ({ petId, setTreatments }) => {
         ...(form.medicineCost !== '' ? { medicineCost: Number(form.medicineCost) } : {}),
       };
 
-      // ✅ đúng endpoint (số nhiều)
+      // 
       const { data: added } = await axiosInstance.post(
         `/api/pets/${petId}/treatment`,
         payload,
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
 
-      // ✅ backend trả subdoc vừa thêm -> append vào state hiện tại
+      // 
       setTreatments((prev) => ([...(prev || []), added]));
 
       setForm(empty);
@@ -81,7 +81,6 @@ const TreatmentForm = ({ petId, setTreatments }) => {
       onChange={onChange}
     />
 
-    {/* Cột nút riêng */}
     <button
       type="submit"
       className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"

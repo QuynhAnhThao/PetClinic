@@ -2,11 +2,13 @@ const mongoose = require('mongoose');
 
 const treatmentSchema = new mongoose.Schema({
     date: { type: Date, required: true },
-    description: { type: String, required: true },
+    description: { type: String, required: true }, 
+    vet: { type: String, required: true },
     treatmentCost: { type: Number, required: true },
-    medicineCost: { type: Number}, 
-    vet: { type: String, required: true }
+    medicineCost: { type: Number },
+    totalCost: { type: Number }
 });
+
 
 const vaccinationSchema = new mongoose.Schema({
   name: String,

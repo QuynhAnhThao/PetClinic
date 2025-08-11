@@ -16,7 +16,7 @@ const Navbar = () => {
       <div>
         {user ? (
           <>
-            <Link to="/" className="hover:opacity-90">Appointment</Link>
+            <Link to="/appointments" className="hover:opacity-90">Appointment</Link>
             <Link to="/pets" className="hover:opacity-90">Pets</Link>
             <Link to="/profile" className="mr-4">Profile</Link>
             <button

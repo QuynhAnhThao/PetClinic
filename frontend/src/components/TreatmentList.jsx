@@ -20,6 +20,8 @@ const TreatmentList = ({ petId, treatments, setTreatments }) => {
   if (!treatments || treatments.length === 0) {
     return <p>No treatments yet.</p>;
   };
+  
+
 
   return (
     <div>
@@ -33,6 +35,7 @@ const TreatmentList = ({ petId, treatments, setTreatments }) => {
             {t.medicineCost !== undefined && (
               <p><strong>Medicine Cost:</strong> ${t.medicineCost}</p>
             )}
+            <p><strong>Total Cost:</strong> ${t.totalCost}</p>
           </div>
           <button
             onClick={() => handleDelete(t._id)}
